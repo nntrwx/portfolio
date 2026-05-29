@@ -20,7 +20,7 @@ const projects = [
     title: 'OUTFIT PLATFORM',
     category: 'digital wardrobe (wip)',
     stack: ['React', 'UI/UX', 'Figma'],
-    repoUrl: 'https://github.com/nntrwx/outfit-platform'
+    repoUrl: 'https://github.com/nntrwx/fit-check-ai'
   }
 ];
 
