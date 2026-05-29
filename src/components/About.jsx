@@ -11,7 +11,7 @@ export default function About() {
           </h2>
           
           <p className="about-description">
-            I'm an 18-year-old ukrainian Software Engineering student at National Technical University "Kharkiv Polytechnic Institute", currently based in Kuopio,Finland. 
+            I'm an 19-year-old ukrainian Software Engineering student at National Technical University "Kharkiv Polytechnic Institute", currently based in Kuopio,Finland. 
             My focus is on bringing ideas to life through clean, scalable front-end architecture and 
             pixel-perfect UI/UX design. I believe digital products should feel premium, intuitive, 
             and effortlessly aesthetic.
