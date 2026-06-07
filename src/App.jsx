@@ -1,11 +1,13 @@
 import { useRef } from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 import './App.css';
 import Projects from './components/Projects';
 import About from './components/About';
 import Footer from './components/Footer';
+import KYO from './components/KYO';
 
-function App() {
+function Home() {
   const projectsSectionRef = useRef(null);
 
   const scrollToProjects = () => {
@@ -14,7 +16,6 @@ function App() {
 
   return (
     <div className="portfolio-container">
-      
       <nav className="navbar">
         <span className="logo">⋆ ˚｡⋆ n i k o l ⋆｡˚ ⋆</span>
         <div className="nav-links">
@@ -29,12 +30,12 @@ function App() {
           <span className="editorial-italic">developer</span> & UI/UX <br />
           ENTHUSIAST
         </h1>
-        
+
         <div className="hero-footer">
           <p className="hero-subtitle">
             minimalism ✦ glassmorphism ✦ japanese aesthetic
           </p>
-          
+
           <button className="glass-btn" onClick={scrollToProjects}>
             view projects
           </button>
@@ -46,11 +47,20 @@ function App() {
       <div ref={projectsSectionRef}>
         <Projects />
       </div>
-      
 
       <Footer />
-
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/kyo" element={<KYO />} />
+      </Routes>
+    </Router>
   );
 }
 

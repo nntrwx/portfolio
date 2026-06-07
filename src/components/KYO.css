@@ -1,0 +1,271 @@
+.kyo-page {
+  background-color: #111111;
+  color: #EAEAEA;
+  font-family: inherit;
+  min-height: 100vh;
+}
+
+.kyo-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5vw;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.kyo-nav .nav-logo {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.kyo-nav .nav-logo a {
+  color: var(--text-muted, #888);
+  text-decoration: none;
+  font-family: var(--font-tech, monospace);
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.kyo-nav .nav-logo a:hover {
+  color: #fff;
+}
+
+.kyo-nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.kyo-nav ul a {
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--font-tech, monospace);
+  font-size: 0.9rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.kyo-nav ul a:hover {
+  opacity: 1;
+}
+
+.kyo-page section {
+  padding: 5rem 5vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.kyo-subtitle {
+  font-family: var(--font-tech, monospace);
+  font-size: 0.9rem;
+  opacity: 0.5;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.kyo-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 300;
+  margin: 0 0 4rem 0;
+  line-height: 1;
+}
+
+.kyo-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+}
+
+.meta-item label {
+  display: block;
+  font-family: var(--font-tech, monospace);
+  font-size: 0.8rem;
+  opacity: 0.5;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.meta-item span {
+  font-size: 1rem;
+}
+
+.kyo-overview h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.kyo-overview p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
+
+.screens-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.view-toggles {
+  display: flex;
+  gap: 1rem;
+}
+
+.view-toggles button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: var(--font-tech, monospace);
+  font-size: 0.9rem;
+  opacity: 0.5;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.view-toggles button.active {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  background: #0a0a0a;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.slide {
+  text-align: center;
+  width: 100%;
+  animation: fadeIn 0.4s ease;
+  position: relative;
+}
+
+.slide p {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-family: var(--font-tech, monospace);
+  font-size: 0.9rem;
+  background: rgba(0,0,0,0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin: 0;
+  z-index: 10;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.slider-controls .nav-btn {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.slider-controls .nav-btn:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dots button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: var(--font-tech, monospace);
+  font-size: 0.8rem;
+  opacity: 0.3;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.dots button.active {
+  opacity: 1;
+  border-bottom: 1px solid white;
+}
+
+.kyo-closing {
+  text-align: center;
+  padding: 10rem 5vw;
+}
+
+.kyo-closing p {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.kyo-closing .closing-meta {
+  font-size: 1rem;
+  font-family: var(--font-tech, monospace);
+  opacity: 0.5;
+}
+
+.kyo-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 5vw;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-family: var(--font-tech, monospace);
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .kyo-nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
