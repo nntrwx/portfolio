@@ -11,6 +11,14 @@ const projects = [
     isInternal: true
   },
   {
+    id: 4,
+    title: 'GamePulse',
+    category: 'web application',
+    stack: ['React', 'Figma', 'Next.js', 'Tailwind CSS', 'GSAP'],
+    repoUrl: '/gamepulse',
+    isInternal: true
+  },
+  {
     id: 2,
     title: 'KIRI',
     category: 'web card game',

@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import About from './components/About';
 import Footer from './components/Footer';
 import KYO from './components/KYO';
+import GamePulse from './components/GamePulse';
 
 function Home() {
   const projectsSectionRef = useRef(null);
@@ -59,6 +60,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/kyo" element={<KYO />} />
+        <Route path="/gamepulse" element={<GamePulse />} />
       </Routes>
     </Router>
   );
