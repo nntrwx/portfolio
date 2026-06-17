@@ -7,6 +7,7 @@ import About from './components/About';
 import Footer from './components/Footer';
 import KYO from './components/KYO';
 import GamePulse from './components/GamePulse';
+import Mochi from './components/Mochi';
 
 function Home() {
   const projectsSectionRef = useRef(null);
@@ -61,6 +62,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/kyo" element={<KYO />} />
         <Route path="/gamepulse" element={<GamePulse />} />
+        <Route path="/mochi" element={<Mochi />} />
       </Routes>
     </Router>
   );

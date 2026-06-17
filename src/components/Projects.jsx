@@ -19,6 +19,14 @@ const projects = [
     isInternal: true
   },
   {
+    id: 5,
+    title: 'Mochi',
+    category: 'skincare landing page & quiz',
+    stack: ['React', 'Vite', 'CSS Variables', 'Lucide React'],
+    repoUrl: '/mochi',
+    isInternal: true
+  },
+  {
     id: 2,
     title: 'KIRI',
     category: 'web card game',
