@@ -47,8 +47,8 @@ const KYO = () => {
         <p className="kyo-subtitle">— Case Study / 2026</p>
         <h1 className="kyo-title">KYO</h1>
         <div className="kyo-meta">
-          <div className="meta-item"><label>Role</label><span>UI/UX Design / Frontend Dev</span></div>
-          <div className="meta-item"><label>Tools</label><span>Figma / Next.js / Tailwind</span></div>
+          <div className="meta-item"><label>Role</label><span>UI/UX Designer</span></div>
+          <div className="meta-item"><label>Tools</label><span>Figma</span></div>
           <div className="meta-item"><label>Type</label><span>Personal Concept Project</span></div>
           <div className="meta-item"><label>Year</label><span>2026</span></div>
         </div>

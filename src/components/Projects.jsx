@@ -4,43 +4,44 @@ import './Projects.css';
 const projects = [
   {
     id: 1,
-    title: 'KYO',
-    category: 'brand landing page',
-    stack: [ 'Figma'],
-    repoUrl: '/kyo',
-    isInternal: true
-  },
-  {
-    id: 4,
     title: 'GamePulse',
-    category: 'web application',
-    stack: ['React', 'Figma', 'Next.js', 'Tailwind CSS', 'GSAP'],
+    category: 'saas landing page & dashboard',
+    stack: ['Figma', 'Next.js', 'React', 'Tailwind CSS', 'GSAP'],
     repoUrl: '/gamepulse',
     isInternal: true
   },
   {
-    id: 5,
-    title: 'Mochi',
-    category: 'skincare landing page & quiz',
-    stack: ['React', 'Vite', 'CSS Variables', 'Lucide React'],
-    repoUrl: '/mochi',
+    id: 2,
+    title: 'KYO',
+    category: 'fashion brand landing page · ui/ux design',
+    stack: ['Figma'],
+    repoUrl: '/kyo',
     isInternal: true
   },
   {
-    id: 2,
+    id: 3,
+    title: 'Mochi',
+    category: 'skincare landing page & quiz',
+    stack: ['Figma', 'React', 'Vite', 'CSS Variables'],
+    repoUrl: '/mochi',
+    isInternal: true
+  }
+];
+
+const otherProjects = [
+  {
+    id: 4,
     title: 'KIRI',
-    category: 'web card game',
+    category: 'multiplayer web card game · team of 3, project lead, ui/ux & front-end',
     stack: ['Vanilla JS', 'Node.js', 'MySQL'],
-    repoUrl: 'https://github.com/Dornsen/Kiri',
-    isInternal: false
+    repoUrl: 'https://github.com/Dornsen/Kiri'
   },
   {
-    id: 3,
+    id: 5,
     title: 'NODO',
     category: 'desktop messenger',
     stack: ['C#', 'WPF', 'PostgreSQL'],
-    repoUrl: 'https://github.com/nntrwx/nodo',
-    isInternal: false
+    repoUrl: 'https://github.com/nntrwx/nodo'
   }
 ];
 
@@ -48,7 +49,7 @@ export default function Projects() {
   return (
     <section className="projects-section">
       <h2 className="section-title">
-        index <span className="editorial-italic">/</span> github repos
+        selected <span className="editorial-italic">work</span>
       </h2>
       
       <div className="project-list">
@@ -92,6 +93,37 @@ export default function Projects() {
             </a>
           );
         })}
+      </div>
+
+      <div className="other-projects">
+        <span className="tech-tag">[ currently building ]</span>
+        <ul className="other-list">
+          <li>
+            <a href="https://github.com/nntrwx/dollique" target="_blank" rel="noopener noreferrer" className="other-row">
+              <span className="other-title">DOLLIQUE</span>
+              <span className="other-meta">
+                q&a community for doll customizers, with a pixel doll avatar builder · full-stack study project · React / Redux / Express / MySQL
+              </span>
+              <span className="other-status">in progress</span>
+              <span className="other-arrow">↗</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="other-projects">
+        <span className="tech-tag">[ other projects ]</span>
+        <ul className="other-list">
+          {otherProjects.map((project) => (
+            <li key={project.id}>
+              <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="other-row">
+                <span className="other-title">{project.title}</span>
+                <span className="other-meta">{project.category} · {project.stack.join(' / ')}</span>
+                <span className="other-arrow">↗</span>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

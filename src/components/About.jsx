@@ -11,27 +11,32 @@ export default function About() {
           </h2>
           
           <p className="about-description">
-            I'm an 19-year-old ukrainian Software Engineering student at National Technical University "Kharkiv Polytechnic Institute", currently based in Kuopio,Finland. 
-            My focus is on bringing ideas to life through clean, scalable front-end architecture and 
-            pixel-perfect UI/UX design. I believe digital products should feel premium, intuitive, 
-            and effortlessly aesthetic.
+            I'm Nikol Nakonechna — a Ukrainian UI/UX designer and frontend developer,
+            studying Software Engineering at NTU "Kharkiv Polytechnic Institute".
+          </p>
+
+          <p className="about-description">
+            I work on both sides of the handoff: I design interfaces in Figma and build them
+            in React and Next.js. Before focusing on frontend, I interned as a Trainee Backend
+            Engineer at Distributed Lab (Go, TypeScript, Docker), so I understand how a product
+            works beyond its UI.
           </p>
 
           <div className="about-facts">
             <span className="tech-tag">[ off-screen ]</span>
             <ul className="facts-list">
               <li>✦ left-handed creative</li>
-              <li>✦ failed musician (still play the piano though)</li>
-              <li>✦ virtual architect (i build luxury mansions in the sims 4 xD)</li>
-              <li>✦ powered by kombucha & cute cats videos</li>
+              <li>✦ plays the piano</li>
+              <li>✦ virtual architect (builds luxury mansions in the sims 4)</li>
+              <li>✦ powered by kombucha & cute cat videos</li>
             </ul>
           </div>
         </div>
 
         <div className="about-visual">
           <img 
-            src="https://i.pinimg.com/736x/b5/cd/9b/b5cd9b427043f00fd2e85018c78b28ea.jpg" 
-            alt="aesthetic vibe" 
+            src={`${import.meta.env.BASE_URL}images/nikol.jpg`}
+            alt="Nikol Nakonechna"
             className="about-image" 
           />
           <div className="image-decoration"></div>

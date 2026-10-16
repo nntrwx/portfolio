@@ -100,3 +100,66 @@
     display: none;
   }
 }
+
+/* other projects */
+.other-projects {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.other-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.other-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: var(--font-tech);
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+.other-row:hover {
+  color: var(--text-main);
+}
+
+.other-title {
+  min-width: 6rem;
+  color: var(--text-main);
+}
+
+.other-meta {
+  flex: 1;
+}
+
+.other-status {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.other-projects + .other-projects {
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .other-row {
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+  }
+  .other-meta {
+    flex-basis: 100%;
+    order: 3;
+  }
+}

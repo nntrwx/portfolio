@@ -18,6 +18,10 @@
   font-weight: 400;
 }
 
+.about-description + .about-description {
+  margin-top: -1.5rem;
+}
+
 .about-facts {
   display: flex;
   flex-direction: column;

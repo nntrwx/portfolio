@@ -33,11 +33,11 @@ const GamePulse: React.FC = () => {
           </div>
           <div className="meta-item">
             <label>Tools</label>
-            <span>React / TypeScript / CSS</span>
+            <span>Figma / Next.js / Tailwind / GSAP</span>
           </div>
           <div className="meta-item">
             <label>Type</label>
-            <span>Web Application</span>
+            <span>Personal Concept Project</span>
           </div>
           <div className="meta-item">
             <label>Year</label>

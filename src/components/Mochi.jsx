@@ -1,6 +1,21 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './GamePulse.css'; // We can reuse the same layout styles as GamePulse since they share the kyo-page style classes
+import './GamePulse.css';
+import './Mochi.css';
+
+const desktopScreens = [
+  { file: 'hero_desk.jpg', label: 'Hero' },
+  { file: 'problem_desk.jpg', label: 'The problem' },
+  { file: 'lineup_desk.jpg', label: 'Product lineup' },
+  { file: 'ritual_desk.jpg', label: 'Routine' },
+  { file: 'quiz_desk.jpg', label: 'Skin quiz' },
+];
+
+const mobileScreens = [
+  { file: 'hero_mob.jpg', label: 'Hero' },
+  { file: 'lineup_mob.jpg', label: 'Lineup' },
+  { file: 'ritual_mob.jpg', label: 'Routine' },
+];
 
 const Mochi = () => {
   useEffect(() => {
@@ -33,11 +48,11 @@ const Mochi = () => {
           </div>
           <div className="meta-item">
             <label>Tools</label>
-            <span>React / Vite / CSS Variables</span>
+            <span>Figma / React / Vite</span>
           </div>
           <div className="meta-item">
             <label>Type</label>
-            <span>E-commerce Landing Page</span>
+            <span>Personal Concept Project</span>
           </div>
           <div className="meta-item">
             <label>Year</label>
@@ -48,25 +63,28 @@ const Mochi = () => {
 
       <section id="overview" className="kyo-overview">
         <p className="kyo-subtitle">— Overview</p>
-        <h2>Mochi — Vibrant Pop Skincare Landing Page & Quiz.</h2>
+        <h2>A playful skincare brand with a routine-building quiz.</h2>
         <p>
-          Refinement and frontend development of a high-conversion landing page for the youth skincare brand **mochi**. Built in a Vibrant Pop Youth style with interactive elements, custom glassmorphism components, and a step-by-step skincare routine constructor.
+          Design and frontend development of a landing page for Mochi, a concept youth skincare brand.
+          The goal: make choosing a skincare routine feel less overwhelming — so instead of a long
+          product catalogue, the page leads with a short quiz that builds a routine for you.
         </p>
         <p>
-          Conducted a comprehensive design and accessibility audit, refactoring the color system to soft warm pastel pink (`#F4BAC5`) and peach (`#F7D2C4`) with high-contrast charcoal text (`#1C1A1A`), bringing the site to WCAG AA accessibility compliance.
+          After the first version, I ran a design and accessibility audit and reworked the colour
+          system: soft warm pink and peach backgrounds with high-contrast charcoal text, bringing
+          the palette to WCAG AA contrast.
         </p>
         <p>
           Key features:
           <br />
-          • Interactive 4-step skincare quiz that analyzes skin profile concerns and dynamically recommends products with active promotional discount codes.
+          • 4-step skin quiz that recommends products based on the user's skin concerns
           <br />
-          • Full keyboard tab navigation compliance with `:focus-visible` states across all inputs, buttons, and custom radio selections.
+          • Full keyboard navigation with visible focus states on all inputs, buttons and custom radio controls
           <br />
-          • Custom custom scrollbar thumb utilizing semi-transparent charcoal opacities, aligning with Aesop and Tamburins editorial aesthetics.
+          • Custom glassmorphism components built on a CSS-variables design system
           <br />
-          • Fully responsive layouts featuring mobile horizontal swipe mechanics for product grids and routines.
+          • Responsive layout with swipeable product and routine carousels on mobile
         </p>
-        
         <div style={{ marginTop: '2rem' }}>
           <a 
             href="https://nntrwx.github.io/mochi/" 
@@ -80,16 +98,25 @@ const Mochi = () => {
         </div>
       </section>
 
-      <section id="concept" className="kyo-screens">
-        <p className="kyo-subtitle">— Interface Concept </p>
-        <div className="track">
-          <div className="slide" style={{ display: 'block' }}>
-            <p> ₊ ˚ ⌗</p>
-            <img src={`${import.meta.env.BASE_URL}images/mochi_concept.png`} 
-              alt="Mochi Skincare Interface Concept" 
-              style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
-            />
-          </div>
+      <section id="screens" className="kyo-screens mochi-screens">
+        <p className="kyo-subtitle">— Desktop</p>
+        <div className="mochi-shots">
+          {desktopScreens.map((shot) => (
+            <figure key={shot.file} className="mochi-shot">
+              <img src={`${import.meta.env.BASE_URL}images/mochi/${shot.file}`} alt={`Mochi — ${shot.label}`} loading="lazy" />
+              <figcaption>{shot.label}</figcaption>
+            </figure>
+          ))}
+        </div>
+
+        <p className="kyo-subtitle">— Mobile</p>
+        <div className="mochi-mobile">
+          {mobileScreens.map((shot) => (
+            <figure key={shot.file} className="mochi-shot">
+              <img src={`${import.meta.env.BASE_URL}images/mochi/${shot.file}`} alt={`Mochi mobile — ${shot.label}`} loading="lazy" />
+              <figcaption>{shot.label}</figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 

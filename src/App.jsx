@@ -21,21 +21,21 @@ function Home() {
       <nav className="navbar">
         <span className="logo">⋆ ˚｡⋆ n i k o l ⋆｡˚ ⋆</span>
         <div className="nav-links">
-          <span className="tech-tag">[ digital products ]</span>
-          <span className="tech-tag" style={{opacity: 0.4}}>[ graphic & print ]</span>
+          <span className="tech-tag">[ ui/ux design ✦ frontend ]</span>
         </div>
       </nav>
 
       <main className="hero">
         <h1 className="hero-title">
-          FRONT-END <br />
-          <span className="editorial-italic">developer</span> & UI/UX <br />
-          ENTHUSIAST
+          UI/UX <br />
+          <span className="editorial-italic">designer</span> & FRONT-END <br />
+          DEVELOPER
         </h1>
 
         <div className="hero-footer">
           <p className="hero-subtitle">
-            minimalism ✦ glassmorphism ✦ japanese aesthetic
+            i design interfaces in figma and build them in react —<br />
+            so nothing gets lost between design and code.
           </p>
 
           <button className="glass-btn" onClick={scrollToProjects}>

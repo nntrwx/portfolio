@@ -1,0 +1,58 @@
+.mochi-screens .kyo-subtitle {
+  margin-top: 3rem;
+}
+
+.mochi-shots {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.mochi-shot {
+  margin: 0;
+}
+
+.mochi-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mochi-shot figcaption {
+  margin-top: 0.8rem;
+  font-family: var(--font-tech, monospace);
+  font-size: 0.8rem;
+  color: var(--text-muted, #888);
+  text-transform: lowercase;
+}
+
+.mochi-mobile {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+}
+
+.mochi-mobile .mochi-shot img {
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .mochi-shots {
+    gap: 2rem;
+  }
+
+  .mochi-mobile {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+  }
+
+  .mochi-mobile .mochi-shot {
+    flex: 0 0 70%;
+    scroll-snap-align: start;
+  }
+}
