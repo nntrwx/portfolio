@@ -3,6 +3,14 @@ import './Projects.css';
 
 const projects = [
   {
+    id: 6,
+    title: 'Dollique',
+    category: 'q&a community with a pixel doll avatar builder · full-stack',
+    stack: ['Figma', 'React', 'Redux Toolkit', 'Node.js', 'MySQL'],
+    repoUrl: '/dollique',
+    isInternal: true
+  },
+  {
     id: 1,
     title: 'GamePulse',
     category: 'saas landing page & dashboard',
@@ -24,14 +32,6 @@ const projects = [
     category: 'skincare landing page & quiz',
     stack: ['Figma', 'React', 'Vite', 'CSS Variables'],
     repoUrl: '/mochi',
-    isInternal: true
-  },
-  {
-    id: 6,
-    title: 'Dollique',
-    category: 'q&a community with a pixel doll avatar builder · full-stack',
-    stack: ['Figma', 'React', 'Redux Toolkit', 'Node.js', 'MySQL'],
-    repoUrl: '/dollique',
     isInternal: true
   }
 ];
