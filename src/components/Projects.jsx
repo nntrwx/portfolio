@@ -25,6 +25,14 @@ const projects = [
     stack: ['Figma', 'React', 'Vite', 'CSS Variables'],
     repoUrl: '/mochi',
     isInternal: true
+  },
+  {
+    id: 6,
+    title: 'Dollique',
+    category: 'q&a community with a pixel doll avatar builder · full-stack',
+    stack: ['Figma', 'React', 'Redux Toolkit', 'Node.js', 'MySQL'],
+    repoUrl: '/dollique',
+    isInternal: true
   }
 ];
 
@@ -93,22 +101,6 @@ export default function Projects() {
             </a>
           );
         })}
-      </div>
-
-      <div className="other-projects">
-        <span className="tech-tag">[ currently building ]</span>
-        <ul className="other-list">
-          <li>
-            <a href="https://github.com/nntrwx/dollique" target="_blank" rel="noopener noreferrer" className="other-row">
-              <span className="other-title">DOLLIQUE</span>
-              <span className="other-meta">
-                q&a community for doll customizers, with a pixel doll avatar builder · full-stack study project · React / Redux / Express / MySQL
-              </span>
-              <span className="other-status">in progress</span>
-              <span className="other-arrow">↗</span>
-            </a>
-          </li>
-        </ul>
       </div>
 
       <div className="other-projects">
